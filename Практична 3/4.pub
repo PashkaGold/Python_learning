@@ -1,0 +1,11 @@
+def factorial(n):
+    # Базовий випадок: факторіал 0 або 1 дорівнює 1
+    if n == 0 or n == 1:
+        return 1
+    # Рекурсивний виклик: факторіал числа n - це n помножено на факторіал (n - 1)
+    return n * factorial(n - 1)
+
+# Приклад використання функції:
+number = 5
+fact = factorial(number)
+print(f"Факторіал числа {number} = {fact}")

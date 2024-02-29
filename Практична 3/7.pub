@@ -1,0 +1,9 @@
+def count_words(sentence):
+    words = sentence.split()  # розділити рядок на слова
+    return len(words)  # повернути кількість слів у рядку
+
+# Приклад використання функції:
+input_sentence = "це є приклад введеного рядка для підрахунку кількості слів"
+word_count = count_words(input_sentence)
+print("Введений рядок:", input_sentence)
+print("Кількість слів у рядку:", word_count)

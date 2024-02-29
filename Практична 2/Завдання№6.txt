@@ -1,0 +1,15 @@
+def count_unique_characters(string):
+    
+    char_count = {}
+    
+        for char in string:
+        
+        char_count[char] = char_count.get(char, 0) + 1
+    
+    
+    for char, count in char_count.items():
+        print(f"Символ '{char}' зустрічається {count} разів.")
+
+
+input_string = "Жданюк "
+count_unique_characters(input_string)

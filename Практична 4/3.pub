@@ -1,0 +1,43 @@
+class Animal:
+    def __init__(self, species, name):
+        self.species = species  # вид тварини
+        self.name = name  # ім'я тварини
+
+class Zoo:
+    def __init__(self):
+        self.animals = []  # початково зоопарк порожній
+
+    def add_animal(self, animal):
+        """Додавання тварини до зоопарку."""
+        self.animals.append(animal)
+
+    def remove_animal(self, animal):
+        """Вилучення тварини з зоопарку."""
+        self.animals.remove(animal)
+
+    def print_animals(self):
+        """Виведення списку тварин у зоопарку."""
+        if self.animals:
+            print("Тварини у зоопарку:")
+            for animal in self.animals:
+                print(f"{animal.name} - {animal.species}")
+        else:
+            print("У зоопарку немає тварин.")
+
+# Приклад використання класів:
+zoo = Zoo()
+
+# Додавання тварин до зоопарку
+lion = Animal("лев", "Сімба")
+tiger = Animal("тигр", "Шерхан")
+zoo.add_animal(lion)
+zoo.add_animal(tiger)
+
+# Виведення тварин у зоопарку
+zoo.print_animals()
+
+# Вилучення тварини з зоопарку
+zoo.remove_animal(tiger)
+
+# Повторне виведення тварин у зоопарку
+zoo.print_animals()

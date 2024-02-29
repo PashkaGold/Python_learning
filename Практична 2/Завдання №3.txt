@@ -1,0 +1,9 @@
+def reverse_words(sentence):
+    words = sentence.split()  
+    reversed_sentence = ' '.join(reversed(words))  
+    return reversed_sentence
+
+
+input_sentence = "Поставте мені 3 будьласка  "
+reversed_result = reverse_words(input_sentence)
+print("Реверс слів у реченні:", reversed_result)

@@ -1,0 +1,10 @@
+def find_longest_word(sentence):
+    words = sentence.split()  # розділити рядок на слова
+    longest_word = max(words, key=len)  # знайти найдовше слово за допомогою функції max та довжини кожного слова
+    return longest_word
+
+# Приклад використання функції:
+input_sentence = "це є приклад введеного рядка для перевірки найдовшого слова"
+longest_word = find_longest_word(input_sentence)
+print("Введений рядок:", input_sentence)
+print("Найдовше слово:", longest_word)

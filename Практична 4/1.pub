@@ -1,0 +1,14 @@
+class Fraction:
+    def __init__(self, numerator, denominator):
+        self.numerator = numerator  # чисельник
+        self.denominator = denominator  # знаменник
+
+    def is_proper(self):
+        return self.numerator < self.denominator  # перевірка чи дріб є правильним
+
+# Приклад використання класу:
+fraction1 = Fraction(3, 4)
+fraction2 = Fraction(5, 2)
+
+print("Чи дріб fraction1 є правильним?", fraction1.is_proper())  # очікується True
+print("Чи дріб fraction2 є правильним?", fraction2.is_proper())  # очікується False

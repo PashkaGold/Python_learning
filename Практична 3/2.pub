@@ -1,0 +1,11 @@
+def power(base, exponent):
+    result = 1
+    for _ in range(exponent):
+        result *= base
+    return result
+
+# Приклад використання функції:
+base_number = 2
+exponent_number = 5
+result = power(base_number, exponent_number)
+print(f"{base_number} в степені {exponent_number} = {result}")

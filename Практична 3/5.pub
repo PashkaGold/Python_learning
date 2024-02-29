@@ -1,0 +1,11 @@
+def capitalize_first_letters(sentence):
+    words = sentence.split()  # розділити рядок на слова
+    capitalized_words = [word.capitalize() for word in words]  # замінити першу літеру кожного слова на велику
+    capitalized_sentence = ' '.join(capitalized_words)  # об'єднати слова у речення
+    return capitalized_sentence
+
+# Приклад використання функції:
+input_sentence = "це є приклад введеного рядка для перевірки"
+output_sentence = capitalize_first_letters(input_sentence)
+print("Введений рядок:", input_sentence)
+print("Результат з великими першими літерами:", output_sentence)
