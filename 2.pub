@@ -1,0 +1,12 @@
+def calculate_force(mass, acceleration):
+    force = mass * acceleration
+    return force
+
+def main():
+    mass = float(input("Введіть масу тіла (кг): "))
+    acceleration = float(input("Введіть величину прискорення (м/с^2): "))
+    force = calculate_force(mass, acceleration)
+    print(f"Сила, яку приклали до тіла, становить {force} Н.")
+
+if __name__ == "__main__":
+    main()

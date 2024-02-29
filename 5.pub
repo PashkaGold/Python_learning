@@ -1,0 +1,17 @@
+def find_min_max(num1, num2, num3):
+    minimum = min(num1, num2, num3)
+    maximum = max(num1, num2, num3)
+    return minimum, maximum
+
+def main():
+    num1 = float(input("Введіть перше число: "))
+    num2 = float(input("Введіть друге число: "))
+    num3 = float(input("Введіть третє число: "))
+
+    min_num, max_num = find_min_max(num1, num2, num3)
+
+    print("Найменше число:", min_num)
+    print("Найбільше число:", max_num)
+
+if __name__ == "__main__":
+    main()

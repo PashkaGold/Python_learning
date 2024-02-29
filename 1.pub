@@ -1,0 +1,16 @@
+from datetime import datetime
+
+def age_to_days(age):
+    days_in_year = 365
+    days_lived = age * days_in_year
+    return days_lived
+
+def main():
+    birth_year = int(input("¬вед≥ть р≥к народженн€: "))
+    current_year = datetime.now().year
+    age = current_year - birth_year
+    days_lived = age_to_days(age)
+    print(f"¬и прожили близько {days_lived} дн≥в.")
+
+if __name__ == "__main__":
+    main()

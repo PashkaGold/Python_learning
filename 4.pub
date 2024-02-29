@@ -1,0 +1,45 @@
+import math
+
+def calculate_area_by_heron_formula(a, b, c):
+    s = (a + b + c) / 2
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+    return area
+
+def calculate_area_by_height(base, height):
+    area = 0.5 * base * height
+    return area
+
+def calculate_area_by_two_sides_and_angle(a, b, angle):
+    area = 0.5 * a * b * math.sin(math.radians(angle))
+    return area
+
+def main():
+    print("Обчислення площі трикутника:")
+    print("1. За формулою Герона")
+    print("2. За висотою")
+    print("3. За двома сторонами і кутом між ними")
+
+    choice = int(input("Виберіть спосіб обчислення (1/2/3): "))
+
+    if choice == 1:
+        a = float(input("Введіть довжину першої сторони: "))
+        b = float(input("Введіть довжину другої сторони: "))
+        c = float(input("Введіть довжину третьої сторони: "))
+        area = calculate_area_by_heron_formula(a, b, c)
+    elif choice == 2:
+        base = float(input("Введіть довжину основи: "))
+        height = float(input("Введіть висоту, опущену на основу: "))
+        area = calculate_area_by_height(base, height)
+    elif choice == 3:
+        a = float(input("Введіть довжину першої сторони: "))
+        b = float(input("Введіть довжину другої сторони: "))
+        angle = float(input("Введіть величину кута між ними (у градусах): "))
+        area = calculate_area_by_two_sides_and_angle(a, b, angle)
+    else:
+        print("Неправильний вибір.")
+        return
+
+    print("Площа трикутника:", area)
+
+if __name__ == "__main__":
+    main()

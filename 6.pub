@@ -1,0 +1,15 @@
+def sum_of_natural_numbers(N):
+    sum_n = (N * (N + 1)) // 2
+    return sum_n
+
+def main():
+    N = int(input("Введіть натуральне число N (1 ? N ? 100): "))
+    
+    if 1 <= N <= 100:
+        result = sum_of_natural_numbers(N)
+        print("Сума перших", N, "натуральних чисел:", result)
+    else:
+        print("Невірний ввід. Натуральне число N повинно бути в діапазоні від 1 до 100.")
+
+if __name__ == "__main__":
+    main()

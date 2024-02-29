@@ -1,0 +1,24 @@
+import cmath
+
+def find_roots(a, b, c):
+    # ќбчисленн€ дискрим≥нанту
+    discriminant = (b ** 2) - (4 * a * c)
+
+    # ќбчисленн€ корен≥в
+    root1 = (-b + cmath.sqrt(discriminant)) / (2 * a)
+    root2 = (-b - cmath.sqrt(discriminant)) / (2 * a)
+
+    return root1, root2
+
+def main():
+    a = float(input("¬вед≥ть коеф≥ц≥Їнт a: "))
+    b = float(input("¬вед≥ть коеф≥ц≥Їнт b: "))
+    c = float(input("¬вед≥ть коеф≥ц≥Їнт c: "))
+
+    root1, root2 = find_roots(a, b, c)
+
+    print("ѕерший кор≥нь:", root1)
+    print("ƒругий кор≥нь:", root2)
+
+if __name__ == "__main__":
+    main()

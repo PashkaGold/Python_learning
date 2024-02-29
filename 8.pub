@@ -1,0 +1,33 @@
+def is_prime(num):
+    if num <= 1:
+        return False
+    elif num == 2:
+        return True
+    elif num % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(num ** 0.5) + 1, 2):
+            if num % i == 0:
+                return False
+        return True
+
+def find_previous_prime(num):
+    if num <= 2:
+        return None
+    
+    for i in range(num - 1, 1, -1):
+        if is_prime(i):
+            return i
+
+def main():
+    num = int(input("Введіть ціле число: "))
+
+    previous_prime = find_previous_prime(num)
+    
+    if previous_prime is not None:
+        print(f"Перше просте число, яке передує числу {num}, є {previous_prime}.")
+    else:
+        print(f"Для числа {num} немає простих чисел, які б передували йому.")
+
+if __name__ == "__main__":
+    main()
